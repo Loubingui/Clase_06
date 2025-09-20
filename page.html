@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Chart.js</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <p>Más informacion en <a href="https://www.chartjs.org/docs/latest/getting-started/" target="_blank">Chart.js</a>y ahora vuelve a la <a href="index.html">portada</a>.</p>
+        
+           <div> 
+  <canvas id="myChart"></canvas>
+  <canvas id="alla"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Gatos', 'Perros', 'Otros'],
+      datasets: [{
+        label: 'Mascotas en Chile',
+        data: [4176029, 8306679, 4049277],
+         backgroundColor: [
+      'rgba(82, 51, 145, 0.7)',
+      'rgba(111, 63, 217, 0.7)',
+      'rgba(152, 126, 217, 0.7)'
+  ],
+      
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+<script>
+    new Chart("alla", {
+    type: "line",
+    data: {
+       labels:['Gatos', 'Perros', 'Otros'],
+  datasets: [
+    {
+    label: 'jijija',
+    data: [4176029, 8306679, 4049277],
+    borderWidth: 3,
+    borderColor: 'pink',
+    },
+    {
+    label: 'waja',
+    data: [4174095, 8842648, 4942066],
+    borderWidth: 1,
+    borderColor: "purple",
+    }
+]
+},
+   options: {
+    scales: {
+        y: {beginAtZero: true}
+    }
+     }
+ });
+</script>
+    
+
+
+    </body>
+</html>
